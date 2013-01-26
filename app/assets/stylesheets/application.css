@@ -1,6 +1,7 @@
 /*
  *= require bootstrap
  *= require google-code-prettify
+ *= require_tree
 */
 
 body {
@@ -80,3 +81,4 @@ article .content {
 .footer-links li:first-child {
   padding-left: 0;
 }
+

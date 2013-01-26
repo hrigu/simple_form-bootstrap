@@ -19,6 +19,8 @@ group :production do
 end
 
 gem 'sqlite3', :groups => [:test, :development]
+
+gem "less-rails"
 gem 'twitter-bootstrap-rails'
 
 gem 'virtus' #fuer form_objects
