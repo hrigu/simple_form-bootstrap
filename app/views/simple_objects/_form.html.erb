@@ -3,7 +3,10 @@
     <%= f.input :name, autofocus: true %>
     <%= f.input :published do %>
         <%= f.input_field :published,
-                          collection: [[true, "juhu"], [false, f.input(:reason, wrapper: :bootstrap_inline, label: false)]],
+                          collection: [[true, "juhu"], [false, f.input(:reason,
+                                                                       wrapper: :bootstrap_inline,
+                                                                       label: false,
+                                                                       input_html: {class: "input-planik_size"})]],
                           :value_method => :first,
                           :label_method => :last,
                           as: :radio_buttons %>
