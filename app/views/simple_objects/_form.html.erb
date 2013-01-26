@@ -1,0 +1,50 @@
+<%# Diese Form hat Radiobuttons, wobei der zweite Button ein Textfeld als "Label_method" enthaelt%>
+<%= simple_form_for @simple, :html => {:class => 'form-horizontal'} do |f| %>
+    <%= f.input :name, autofocus: true %>
+    <%= f.input :published do %>
+        <%= f.input_field :published,
+                          collection: [[true, "juhu"], [false, f.input(:reason, wrapper: :bootstrap_inline, label: false)]],
+                          :value_method => :first,
+                          :label_method => :last,
+                          as: :radio_buttons %>
+        <%#= f.input :reason, wrapper: :bootstrap_inline, label: false %>
+    <% end %>
+    <div class="controls">
+      <%= f.button :submit %>
+    </div>
+<% end %>
+
+<br>
+
+<%#Twitter Bootstrap Form Vorlage%>
+<form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="inputName">Name</label>
+
+    <div class="controls">
+      <input type="text" id="inputName" placeholder="name">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="optionJa">rot?</label>
+
+    <div class="controls">
+      <label class="radio">
+        <input type="radio" name="optionsRadios" id="optionJa" value="option1" checked>
+        ja
+      </label>
+      <label class="radio">
+        <input type="radio" name="optionsRadios" id="optionNein" value="option2">
+
+        <div class="control-group warning">
+          <input type="text" id="inputGrund" placeholder="...??"><span class="help-inline">Warnung</span>
+        </div>
+      </label>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn">Sign in</button>
+    </div>
+  </div>
+</form>

@@ -20,3 +20,5 @@ end
 
 gem 'sqlite3', :groups => [:test, :development]
 gem 'twitter-bootstrap-rails'
+
+gem 'virtus' #fuer form_objects
