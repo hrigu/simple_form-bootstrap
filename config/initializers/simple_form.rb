@@ -57,13 +57,13 @@ SimpleForm.setup do |config|
   end
 
   ##
-  # Dieses Wrapper Konfiguration generiert einen Wrapper ohne noch zusätzlichen "controls" wrapper um den Input
-  # kein Wrapper um den Input herum
+  # Diese Wrapper Konfiguration generiert einen Wrapper ohne noch zusätzlichen "controls" wrapper um den Input
+  # * Kein Label
+  # * kein Wrapper um den Input herum
   #
-  config.wrappers :bootstrap_inline, :tag => 'div', :class => 'control-group inline', :error_class => 'error' do |b|
+  config.wrappers :bootstrap_inline, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
     b.use :html5
     b.use :placeholder
-    b.use :label
     b.use :input
     b.use :error, :wrap_with => {:tag => 'span', :class => 'help-inline'}
     b.use :hint, :wrap_with => {:tag => 'p', :class => 'help-block'}
