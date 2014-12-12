@@ -7,3 +7,23 @@ tmp/
 config/database.yml
 vendor/bundle
 
+
+.idea/.generators
+
+.idea/.name
+
+.idea/.rakeTasks
+
+.idea/encodings.xml
+
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/scopes/scope_settings.xml
+
+.idea/simple_form-bootstrap.iml
+
+.idea/workspace.xml
+
+.idea/vcs.xml
