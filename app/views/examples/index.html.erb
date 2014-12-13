@@ -3,8 +3,14 @@
   <li class="active">Examples</li>
 <% end %>
 
+<div class="row">
+  <%= render partial: 'basic_example_sf', layout: 'sf_label', locals: { title: 'Basic Form' } %>
+</div>
 
 <div class="row">
   <%= render partial: 'inline_form_sf', layout: 'sf_label', locals: { title: 'Inline Form' } %>
 </div>
 
+<div class="row">
+  <%= render partial: 'horizontal_form_sf', layout: 'sf_label', locals: { title: 'Horizontal Form' } %>
+</div>
