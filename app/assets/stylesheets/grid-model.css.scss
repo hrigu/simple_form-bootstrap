@@ -1,3 +1,50 @@
 
 .grid-model {
 }
+
+//colors
+$color_gallery_approx: #eee;
+$color_chestnut_rose_approx: #d9534f;
+$color_casablanca_approx: #f0ad4e;
+$color_viking_approx: #5bc0de;
+
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid $color_gallery_approx;
+  border-left-width: 5px;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 3px;
+  h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  code {
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 3px;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+.bs-callout-danger {
+  border-left-color: $color_chestnut_rose_approx;
+  h4 {
+    color: $color_chestnut_rose_approx;
+  }
+}
+.bs-callout-warning {
+  border-left-color: $color_casablanca_approx;
+  h4 {
+    color: $color_casablanca_approx;
+  }
+}
+.bs-callout-info {
+  border-left-color: $color_viking_approx;
+  h4 {
+    color: $color_viking_approx;
+  }
+}
+.bs-callout+.bs-callout {
+  margin-top: -5px;
+}
