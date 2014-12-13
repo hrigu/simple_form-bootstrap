@@ -12,7 +12,7 @@
       <a href="http://github.com/rafaelfranca/simple_form-bootstrap">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
       </a>
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Simple Form & Bootstrap</a>
         </div>
@@ -20,23 +20,18 @@
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Examples", examples_path %></li>
           <li><%= link_to "Documentation", documentation_path %></li>
+          <li><%= link_to "Grid Model", grid_model_test_path %></li>
+
         </ul>
       </div>
     </div>
   </header>
-  <div class="container master-container">
+  <div class="container-fluid  with-border">
+    <% if content_for? :breadcrumb %>
     <ul class="breadcrumb">
       <%= yield :breadcrumb %>
     </ul>
-    <div class='alert alert-info fade in' data-alert='alert'>
-      <h3>
-        <strong>
-          <a href="https://github.com/plataformatec/simple_form">Simple Form</a> and <a href="http://getbootstrap.com/">Bootstrap</a> sample application.
-        </strong>
-      </h3>
-      <p>Here you'll see the usage of <a href="https://github.com/plataformatec/simple_form">Simple Form</a> and the <a href="http://getbootstrap.com/">Bootstrap</a> toolkit on a Rails 4 application.</p>
-      <p>You can check the source code on <a href='https://github.com/rafaelfranca/simple_form-bootstrap'>GitHub</a>.</p>
-    </div>
+    <% end %>
 
     <% if notice %>
       <div class="alert alert-success fade in" data-alert="alert">

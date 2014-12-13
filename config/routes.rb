@@ -9,5 +9,8 @@ Rails.application.routes.draw do
     end
   end
 
+
+  get "grid_model_test", to: "grid_model#index"
+
   root to: 'examples#index'
 end
