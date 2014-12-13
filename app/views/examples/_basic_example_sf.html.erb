@@ -1,4 +1,4 @@
-<%= simple_form_for @user_basic, url: create_basic_examples_url, as: 'user_basic' do |f| %>
+<%= simple_form_for @user_basic, url: create_basic_examples_path, as: 'user_basic' do |f| %>
   <%= f.error_notification %>
 
   <%= f.input :email, placeholder: 'Enter email' %>
