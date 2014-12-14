@@ -3,9 +3,19 @@
 @import "github";
 @import "debug";
 @import "grid-model";
+@import "bootstrap-datepicker3";
+
+
+
 
 body {
   padding-top: 50px;
+}
+
+.modal-dialog {
+  //damit der z-index des twitter-bootstrap-datepicker stimmt. Der muss nähmlihc 1040 sein, damit der Dialog über dem modalen Fenster kommt.
+  // Berechnet wird der z-index im javascirpt, indem zum z-index des ersten Parent Element, welches ein z-index hat, 10 dazugezählt wird.
+  z-index: 1030;
 }
 
 .footer {
@@ -32,4 +42,8 @@ body {
 
 .footer-links li:first-child {
   padding-left: 0;
+}
+
+.datepicker.dropdown-menu {
+  z-index: 1040;
 }

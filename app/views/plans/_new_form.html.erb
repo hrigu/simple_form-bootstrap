@@ -9,6 +9,7 @@
     <div class="modal-body">
           <%= f.error_notification %>
           <%= f.input :title, placeholder: 'Titel' %>
+          <%= f.input :date_from, as: :bootstrap_datepicker %>
           <%= f.input :published, hint: "hint" %>
     </div>
 
