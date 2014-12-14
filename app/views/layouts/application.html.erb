@@ -9,7 +9,7 @@
 </head>
 <body>
   <%= render partial: 'layouts/navbar_links', layout: "layouts/navbar" %>
-  <div class="container-fluid with-border">
+  <div class="container-fluid">
     <% if content_for? :breadcrumb %>
     <ul class="breadcrumb">
       <%= yield :breadcrumb %>

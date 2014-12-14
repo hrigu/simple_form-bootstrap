@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :plans
+
 
   get "grid_model_test", to: "grid_model#index"
 

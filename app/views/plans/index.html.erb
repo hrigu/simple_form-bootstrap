@@ -1,0 +1,32 @@
+<div class="plans-page">
+
+  <div class="page-header">
+    <h1>Beispiele mit Formularen <small>in verschiedenen Grössen</small></h1>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="bs-callout bs-callout-info">
+          <h4>Modal</h4>
+          <p>modal</p>
+        </div>
+      </div>
+      <div class="col-xs-6">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          demo modal...
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newPlan">
+          Neuer Plan
+        </button>
+        <!-- Modal -->
+        <%= render 'modal_example_from_bs' %>
+        <%= render 'modal_new_plan' %>
+
+      </div>
+
+    </div>
+  </div>
+</div>
