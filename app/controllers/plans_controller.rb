@@ -4,12 +4,19 @@ class PlansController < ApplicationController
   end
 
   def new
-
+    @plan = Plan.new()
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def create
     @plan = Plan.new(plan_params)
-    render text: "hi"
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
 

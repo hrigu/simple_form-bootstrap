@@ -18,12 +18,13 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
           demo modal...
         </button>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newPlan">
-          Neuer Plan
-        </button>
+        <br/>
+        <br/>
+        <%= button_to 'Neuer Plan...', new_plan_path,  {method: "get", class: "btn btn-primary", remote: true, data: {toggle: "modal", target: "#modal-window"}} %>
+
         <!-- Modal -->
         <%= render 'modal_example_from_bs' %>
-        <%= render 'modal_new_plan' %>
+        <%= render 'modal_window' %>
 
       </div>
 
