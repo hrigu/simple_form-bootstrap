@@ -1,14 +1,19 @@
+
+#
+# Custom Simpleform Input for boostrap_datepicker (bootstrap-datepicker-rails)
+# See http://stackoverflow.com/questions/15405703/rails-simple-form-bootstrap-and-datepicker
+# Auf Hiddenfield verzichtet, Da Rails auch mit dem schweizerischen Dateformat dd.mm.yyyy zurechtkommt....
 class BootstrapDatepickerInput < SimpleForm::Inputs::Base
   def input(wrapper_options)
     text_field_options = input_html_options.with_indifferent_access
     format =  text_field_options.delete(:format)
-    hidden_field_options = text_field_options.dup
-    hidden_field_options[:class] = text_field_options[:class].dup # so they won't work with same array object
-    hidden_field_options[:id] = "#{attribute_name}_hidden"
+   # hidden_field_options = text_field_options.dup
+   # hidden_field_options[:class] = text_field_options[:class].dup # so they won't work with same array object
+   # hidden_field_options[:id] = "#{attribute_name}_hidden"
     text_field_options[:class] << 'bootstrap-datepicker'
     text_field_options[:type] = 'text'
     text_field_options[:value] ||= format_date(value(object), format)
-    set_data_option text_field_options, 'date-format', I18n.t(format, scope: [:date, :datepicker], default: :default)
+    #set_data_option text_field_options, 'date-format', I18n.t(format, scope: [:date, :datepicker], default: :default)
     default_data_option text_field_options, 'provide', 'datepicker'
     default_data_option text_field_options, 'date-language', I18n.locale()
     default_data_option text_field_options, 'date-autoclose', true
@@ -17,8 +22,7 @@ class BootstrapDatepickerInput < SimpleForm::Inputs::Base
     default_data_option text_field_options, 'date-week-start', 1
 
     return_string =
-        "#{@builder.text_field(attribute_name, text_field_options.to_hash)}\n" +
-            "#{@builder.hidden_field(attribute_name, hidden_field_options.to_hash)}\n"
+        "#{@builder.text_field(attribute_name, text_field_options.to_hash)}\n" #+ "#{@builder.hidden_field(attribute_name, hidden_field_options.to_hash)}\n"
     return return_string.html_safe
   end
 
