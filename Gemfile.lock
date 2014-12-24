@@ -41,6 +41,7 @@ GEM
       railties (>= 3.0)
     bootstrap-sass (3.3.1.0)
       sass (~> 3.2)
+    bootstrap_form (2.2.0)
     builder (3.2.2)
     daemons (1.1.9)
     erubis (2.7.0)
@@ -111,6 +112,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-datepicker-rails
   bootstrap-sass (~> 3.3.0)
+  bootstrap_form
   jquery-rails
   json
   rails (~> 4.1.0)

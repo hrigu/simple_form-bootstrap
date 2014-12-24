@@ -15,7 +15,13 @@ class PlansController < ApplicationController
     @plan = Plan.new(plan_params)
     respond_to do |format|
       format.html
-      format.js
+      format.js {
+        if @plan.save
+          render :create
+        else
+          render :new
+        end
+      }
     end
   end
 

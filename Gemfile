@@ -18,3 +18,4 @@ group :production do
 end
 
 gem 'sqlite3', :groups => [:test, :development]
+gem 'bootstrap_form'
