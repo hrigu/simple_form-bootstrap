@@ -1,10 +1,10 @@
 <%= bootstrap_form_for(@plan, layout: :horizontal, remote: true) do |f| %>
     <div class="modal-body">
-      <%= f.alert_message "Please fix the errors below." , error_summary: false%>
+      <%= f.alert_message "Please fix the errors below." , error_summary: false %>
 
-      <%= f.text_field :title%>
+      <%= f.text_field :title %>
 
-      <%= f.date_field :date_from, control_col: "col-sm-5" %>
+      <%= f.date_field :date_from, control_col: "col-sm-5", append: '<span class="glyphicon glyphicon-calendar"/>'.html_safe %>
       <%= f.form_group :published, label: { text: "Optional Label" } do %>
           <%= f.check_box :published do %>
               published
