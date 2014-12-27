@@ -11,7 +11,7 @@
 // require bootstrap-datepicker
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.de.js
-//A simple Code hi_li_hter (mit ruby)
-//= require rainbow
-//= require ruby
+//A simple Code high-lighter (mit ruby als Sprache welche 'verstanden' wird)
+// require rainbow
+// require ruby
 //

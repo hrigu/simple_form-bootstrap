@@ -3,8 +3,15 @@
       <%= f.alert_message "Please fix the errors below." , error_summary: false %>
 
       <%= f.text_field :title %>
+      <%= f.hihi_field :title %>
 
-      <%= f.date_field :date_from, control_col: "col-sm-5", append: '<span class="glyphicon glyphicon-calendar"/>'.html_safe %>
+      <%= f.date_field :date_from %>
+      <%= f.date_select :date_from %>
+      <%= f.text_field :date_from,
+                       value: @plan.date_from ? l(@plan.date_from): nil,
+                       data: {provide: "datepicker", date_language: "de", date_week_start: 1},
+                       control_col: "col-sm-6",
+                       append: '<span class="glyphicon glyphicon-calendar"/>'.html_safe %>
       <%= f.form_group :published, label: { text: "Optional Label" } do %>
           <%= f.check_box :published do %>
               published
